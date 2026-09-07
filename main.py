@@ -48,5 +48,5 @@ def submit_questionnaire(data: dict):
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail="服务器内部错误"
+            detail=f"{type(e).__name__}: {str(e)}"
         )
