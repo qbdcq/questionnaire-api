@@ -1,11 +1,9 @@
-import os
-from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 import psycopg
+import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-load_dotenv()
 
 DB_URL = os.environ["DATABASE_URL"]
 
