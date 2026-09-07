@@ -5,7 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-DB_URL = os.environ["DATABASE_URL"]
+print("DB_URL starts:", DB_URL[:20])
+print("DB_URL contains =", "=" in DB_URL)
 
 app.add_middleware(
     CORSMiddleware,
